@@ -1,0 +1,383 @@
+{
+  "infos": {
+    "conditions": [
+      "yellow",
+      "blue",
+      "orange",
+      "red",
+      "green"
+    ],
+    "instructions": [
+      "-up", "-left", "-right"
+    ],
+    "tutorial": null
+  },
+  "boxes": [
+    [
+      {
+        "isEmpty": true,
+        "color": "yellow",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": [],
+        "star": true
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": [],
+        "star": true
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "yellow",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": [],
+        "star": true
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "green",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": [],
+        "star": true
+
+      },
+      {
+        "isEmpty": true,
+        "color": "green",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": [],
+        "star": true
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "win": true,
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "red",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "red",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "red",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "player": {
+          "direction": "right",
+          "classes": [
+            "play"
+          ]
+        },
+        "isEmpty": false,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ]
+  ]
+}
+      

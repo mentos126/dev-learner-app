@@ -1,0 +1,149 @@
+<div *ngIf="isModalShown" [config]="{ show: true }" bsModal (onHide)="onModalHide('hide', $event)" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 *ngIf="tuto===1" id="dialog-auto-name" class="modal-title pull-left">Les conditions</h4>
+        <h4 *ngIf="tuto===2" id="dialog-auto-name" class="modal-title pull-left">Les instructions</h4>
+        <h4 *ngIf="tuto===3" id="dialog-auto-name" class="modal-title pull-left">Un block si/alors</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="onModalHide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div *ngIf="tuto===1" style="text-align:center">
+              <p>
+                Une condition est une évaluation qui retourne vrai ou faux.
+              </p>
+              <div style="text-align: center;width:100%;min-height: 30px;">
+                <img src="./assets/c_1.png" alt="Fusée dans une case bleue">
+              </div>
+              <p>
+                Comme la fusée est sur une case bleue, la condition suivante est validée :
+              </p>
+              <ul style="text-align:left"><li>Si <span style="color:blue"><b>bleu</b></span> </li></ul>
+              <p>
+                Voici un équivalent dans les langages C/C++, Java, JavaScript d'autres : 
+              </p>
+              <pre>
+                if( carte[fusee.x][fusee.y].couleur === 'bleue' ){{'{'}}
+                  /*
+                    La condition esr vérifiée !
+                  */
+                {{'}'}}
+              </pre>
+              Plus d'informations <a href="https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/14612-les-conditions">ici</a>
+            </div>
+            <div *ngIf="tuto===2" style="text-align:center">
+              <p>
+                Une instruction est un ordre donné à la fusée.
+                Sans instruction, la fusée de se déplace pas et n'éffectue aucune rotation
+              </p>
+              <br>
+              <div style="text-align: center;width:100%;min-height: 30px;">
+                <img src="./assets/c_2.png" width="50%" alt="Fusée dans une case bleue">
+              </div>
+              <p>
+                En utilisant l'instruction << avancer >>, la fusée peut avancer
+              </p>
+              <ul style="text-align:left"><li> {{'{...}'}} avancer() </li></ul>
+              <p>
+                Voici un équivalent dans les langages C/C++, Java, JavaScript et d'autres : 
+              </p>
+              <pre>
+                fusee.avancer(coord.x, coord.y + 1)
+              </pre>
+              Plus d'informations <a href="https://fr.wikipedia.org/wiki/Instruction_informatique">ici</a>
+            </div>
+            <div *ngIf="tuto===3" style="text-align:center; width:100%">
+              <p>
+                Un block de condition/instruction est utilisé pour détecter une couleur sur la carte et éffectuer une action.
+                Utiliser les conditions et les instruction disponible pour faire des blocks.
+              </p>
+              <div style="text-align: center;width:100%;min-height: 30px;">
+                <img src="./assets/c_3.png" width="70%" alt="Fusée dans une case bleue">
+              </div>
+              <p>
+                Comme la fusée est sur une case bleue, la condition suivante est validée :
+              </p>
+                <ul style="text-align:left"><li>Si <span style="color:blue"><b>bleu</b></span> alors <b>avancer</b></li></ul>
+                <br/>
+                <p>
+                  Voici un équivalent dans les langages C/C++, Java, JavaScript et d'autres :
+                </p>
+              <pre>
+                if( carte[fusee.x][fusee.y].couleur === 'bleue' ){{'{'}}
+                  fusee.avancer(coord.x, coord.y + 1)
+                {{'}'}}
+              </pre>
+              Plus d'informations <a href="https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c/14612-les-conditions">ici</a>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12 c-h-btn"><button (click)="onModalHide()" class="btn btn-default">Fermer</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #popTemplate1>
+    <div class="row pop-allert">
+    <div class="col-xs-6"><button (click)="deleteElement($event)" type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></div>
+    <div class="col-xs-6"><button (click)="tutoElement($event)" type="button" class="btn btn-success"><i class="fa fa-question"></i></button></div>
+  </div>
+</ng-template>
+
+<ng-template #popTemplate2>
+  <div class="row pop-allert">
+    <div class="col-xs-6"><button (click)="deleteElement($event)" type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i></button></div>
+    <div class="col-xs-6"><button (click)="tutoElement($event)" type="button" class="btn btn-success"><i class="fa fa-question"></i></button></div>
+  </div>
+</ng-template>
+
+<div class="instruction-block row" (click)="temporize('', 'block', $event)" [popover]="popTemplate1" popoverTitle="Bloc si alors" [outsideClick]="true">
+  <div class="col-xs-12">
+    <div class="row">
+      <!-- SI -->
+      <div class="col-xs-3 col-sm-2 col-md-3 c">
+        <div class="txt-i">si</div>
+      </div>
+      <!-- CONDITION -->
+      <div class="col-xs-3">
+        <div class="elt-wrapper color" cdkDropList [id]="assertion.idCondition" [cdkDropListDisabled]="cdkDropListDisabled_" [cdkDropListData]="assertion.dataC" [cdkDropListConnectedTo]="sourceCondition" (cdkDropListDropped)="drop($event)">
+          <div *ngFor="let element of assertion.dataC" [style.background]="element" (click)="temporize(element, 'condition', $event)" cdkDrag [popover]="popTemplate2" placement="right" [outsideClick]="true" class="elt">
+            <div *ngIf="element[0]!=='-'" class="e e-c coloredElt"></div>
+            <div *cdkDragPreview class="e e-c coloredElt" [style.background]="element"></div>
+          </div>
+          <div *ngIf="assertion.dataC.length===0" class="elt">
+            <div class="e e-c coloredElt"></div>
+          </div>
+            
+        </div>
+      </div>
+      <!-- ALORS -->
+      <div class="col-xs-3 col-sm-4 col-md-3 c">
+        <div class="txt-i">alors</div>
+      </div>
+      <!-- INSTRUCTION -->
+      <div class="col-xs-3">
+        <div class="elt-wrapper arrows" cdkDropList [id]="assertion.idInstruction" [cdkDropListDisabled]="cdkDropListDisabled_" [cdkDropListData]="assertion.dataI" [cdkDropListConnectedTo]="sourceInstruction" (cdkDropListDropped)="drop($event)">
+          <div *ngFor="let element of assertion.dataI; let idx=index" cdkDrag (click)="temporize(element, 'instruction', $event)" cdkDrag [popover]="popTemplate2" placement="left" [outsideClick]="true" class="elt">
+            <div *ngIf="element[0]==='-'" class="e e-i"><i class="fa fa{{ element === '-left' ? '-reply': (element === '-right'?'-share':'-arrow-up') }}"></i></div>
+            
+          </div>
+          <div *ngIf="assertion.dataI.length===0" class="elt elt-blank">
+            <div class="e e-blank-adder"><i class="fa fa-plus"></i></div>
+          </div>
+          <!-- <div *ngIf="assertion.dataI.length===0" class="elt">
+            <div class="e e-i"><i class="fa fa-plus"></i></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

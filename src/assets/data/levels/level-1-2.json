@@ -1,0 +1,385 @@
+          {
+  "infos": {
+    "conditions": [
+      "blue",
+      "orange"
+    ],
+    "instructions": [
+      "-up"
+    ],
+    "tutorial": [
+      {
+        "tag":"mapTuto",
+        "body": "Il ya a une <b>nouvelle couleur</b> ... <br><br> Donc une <b>nouvelle condition </b>!"
+      },{
+        "tag":"conditionsTuto",
+        "body":"<b>L'orange a été ajouté comme nouvelle condition</b><br><br>Utilisez-la."
+      },{
+        "tag": "sialorsTuto",
+        "body": "<b>Ajoutez des conditions</b><br><br>Lorsque le trajet de la fusée est bloqué par d'autres couleurs, ajoutez de nouvelles conditions.<br><br><b>Cliquez sur \"+  Nouvelle condition\""
+      }
+    ]
+  },
+  "boxes": [
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "win": true,
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "orange",
+        "classes": [],
+        "elements": [],
+        "star": true
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "player": {
+          "direction": "up",
+          "classes": [
+            "play"
+          ]
+        },
+        "isEmpty": false,
+        "color": "blue",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ],
+    [
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      },
+      {
+        "isEmpty": true,
+        "color": "white",
+        "classes": [],
+        "elements": []
+      }
+    ]
+  ]
+}

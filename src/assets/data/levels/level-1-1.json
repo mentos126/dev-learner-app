@@ -1,0 +1,95 @@
+{
+  "infos": {
+    "conditions":["blue"],
+    "instructions":["-up"],
+    "tutorial":[
+      {
+        "tag":"mapTuto",
+        "body": "<b>Vous êtes la fusée.</b><br><br>Vous devez vous déplacer sur les cases colorées pour arriver au drapeau !"
+      },{
+        "tag":"conditionsTuto",
+        "body":"<b>Les conditions.</b><br><br>Utilisez les <b>couleurs</b> pour identifier la <b>case</b> sur laquelle vous êtes."
+      },{
+        "tag":"instructionTuto",
+        "body":"<b>Les instructions</b><br><br>Utilisez les <b>flèches directionnelles</b> comme une instruction pour vous <b>déplacer</b>."
+      },{
+        "tag":"sialorsTuto",
+        "body":"<b>Vous composez ici l'ensemble des ordre à donner à la fusée</b><br><br>Clickez sur <b>\"+ Nouveau block\"</b><br><br>Exemple : <br><ul><li>si <b style=\"color:blue;\">bleu</b> <b>alors</b> avancer</li><li><b>si</b> <b style=\"color:red;\">rouge</b> <b>alors</b> tourner</li></ul>"
+      }
+    ]
+  },
+  "boxes":[
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "win":true, "isEmpty" : true, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "star":true, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "player":{"direction":"up", "classes":["play"]}, "isEmpty" : false, "color" : "blue", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ],
+    [
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []},
+      { "isEmpty" : true, "color" : "white", "classes" : [], "elements" : []} 
+    ]
+  ]
+}

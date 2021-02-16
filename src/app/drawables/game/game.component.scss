@@ -1,0 +1,424 @@
+$grey-border : solid 1px rgba(0,0,0,.3);
+$dodger-blue : #22a7f0;
+$title-blue : #0d7cb9;
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+/* Animate items as they're being sorted. */
+.cdk-drop-list-dragging .cdk-drag {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Animate an item that has been dropped. */
+.cdk-drag-animating {
+    transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.modal {
+    z-index: 2000;
+}
+.modal-dialog {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top : 0px;
+    margin-bottom : 0px;
+    .c-h-btn{
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    .backtomenu-wrapper {
+        p {
+            font-size: 1.5em;
+        }
+        p:last-of-type {
+            margin-bottom : 15px;
+        }
+    }
+    .stars{
+        width : 100%;
+        text-align: center;
+        i{
+            font-size: 2em;
+            color : orange;
+            margin : 4px;
+        }
+
+    }
+}
+
+// .ghost {
+//     width:0px;
+//     height: 0px;
+//     // display: none;
+// }
+.no-padding-h {
+    padding-left : 0px;
+    padding-right: 0px;
+}
+.coloredElt{
+    width: 25px;
+    height: 25px;
+}
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+// .menu-wrapper {
+//     width: 100%;
+// }
+.menu-wrapper > .row {
+    width: 100%;
+}
+.menu-wrapper {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    padding : 15px 0;
+    [class*="col-"], .container, .row{
+        height: 100%;
+    }
+    .menu-btn, .info-wrapper{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 3em;
+    }
+    .menu-btn{
+        // background : green;
+    }
+    .info-wrapper {
+        // background: blue;
+    }
+
+}
+.game-wrapper {
+    width:100%vw;
+    // height:100vh;
+    display: flex;
+
+    border-top:solid 1px #ececec;
+    margin : 0 !important;
+    padding : 0 !important;
+
+    .container {
+
+        .row{
+            // border : solid 1px purple;
+            /**
+             *  MAP
+             */
+            .map-container-parent {
+                width: 100%;
+                // border: dashed 3px green;
+            }
+            /**
+             *  EDITOR & TOOLS
+             */
+            .editor-wrapper-parent {
+
+                height: 100%;
+
+                // TOOLS
+                .tools-container-parent > .row {
+                    // border: solid 1px red;
+                    height: 100%;
+                    div.col-xs-6 {
+                        // background : green;
+                        height: 100%;
+                        width: 50%;
+                    }
+                }
+                .tools-container-parent {
+                    // height: 30%;
+                    border : $grey-border;
+                    border-radius: 6px;
+
+                    ///////
+                    .tool-wrapper:first-of-type {
+                        padding:0px;
+                    }
+                    .tool-wrapper:last-of-type {
+                        padding:0px;
+                    }
+
+                    .tool-wrapper {
+                        width:100%;
+                        height: calc( 100% - 34px );
+
+
+                        .elts-title.o {
+                            border-top-left-radius: 4px;
+                            border-top-right-radius: 0px !important;
+
+                            div {
+                                width : 100%;
+                                border-right: solid 1px #0c0c0c;
+                            }
+                        }
+                        .elts-title {
+                            border-top-right-radius: 4px;
+                            color : #0c0c0c;
+                            background : #eaeaea;
+                            height: 34px;
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+                            border-bottom: $grey-border;
+                            text-align: center;
+
+                        }
+                        .elts-wrapper {
+                            height: 100%;
+                            overflow-y: scroll;
+                            padding: 5px;
+
+                            .tile-row {
+
+                                margin : 0;padding  : 0;
+                                display: flex;
+                                display: -webkit-box;
+                                display: -moz-box;
+                                display: -ms-flexbox;
+                                display: -webkit-flex;
+                                width: 100%;
+                                flex-wrap: wrap;
+                                margin : 5px 0;
+                                .tile:active{
+                                    cursor: move;
+
+                                }
+                                .tile {
+
+                                    cursor: move;
+                                    width: 35px;
+                                    height:  35px;
+                                    border-radius: 50px;
+                                    border:solid 1px rgba(0,0,0,.2);
+                                    display: flex;
+                                    justify-content: center;
+                                    align-content: center;
+                                    align-items: center;
+                                    margin : 5px;
+
+                                    .fa{
+                                        color: black;
+                                    }
+
+                                }
+                                .tile:before {
+                                    content:'';
+                                    float:left;
+                                    padding-top:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                /**
+                 * EDITOR
+                 */
+                .editor-wrapper {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    border : $grey-border;
+                    border-radius: 6px;
+                    height: calc( 70% - 25px );
+                    margin-top:25px;
+                    // background : blue;
+                    .run{
+                        // display: flex;
+                        border-bottom: solid 1px yellowgreen;
+                        width: 100%;
+                        height: 40px;
+                        // background: red;
+                        border-top-left-radius: 6px;
+                        border-top-right-radius: 6px;
+                        i {
+                            font-size: 1.8em;
+                        }
+                        div.btn {
+                            background: transparent;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+
+                            // height: 100%;
+                            // justify-content: center;
+                            // align-content: center;
+                            align-items: center;
+
+                        }
+                    }
+                    .instructions-wrapper {
+                        // border : solid 1px red;
+                        padding : 10px;
+                        height: calc( 100% - 78px );
+                        min-height: calc( 100% - 78px );
+                        max-height: 400px;
+                        overflow-y: scroll;
+                        background: #fff;
+                        width :100%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .blank-instruction{
+                            margin-bottom : 10px !important;
+                            min-height: 50px;
+                            background: rgba(54, 245, 204, 0.431);
+                            border-radius : 27px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                    .blank-adder {
+
+                        .loader-cubic {
+                            width : 33px;
+                            height: 33px;
+                            background-image: url(../../../assets/box.gif);
+                            background-size: cover;
+                        }
+
+                        background : #eaeaea;
+                        color : #0c0c0c;
+                        cursor: pointer;
+                        border-top : $grey-border;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        align-content: center;
+                        align-items: center;
+                        height: 40px;
+                        border-bottom-left-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                    }
+                    .blank-adder.loader-container{
+                        background : black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 200px) {
+
+    .modal-content {
+        min-width : 100%;
+    }
+    .menu-wrapper {
+        height: 65px;
+        .menu-btn, .info-wrapper{
+            font-size: 1em;
+        }
+    }
+    .game-wrapper {
+        min-height: calc( 100vh - 65px );
+        .container {
+            margin-top : 50px;
+        }
+    }
+
+    .editor-wrapper-parent{
+        margin-top : 25px;
+        .tools-container-parent {
+            min-height: 100px;
+        }
+    }
+}
+@media (min-width: 350px) {
+
+    .menu-wrapper {
+        .menu-btn, .info-wrapper{
+            font-size: 1.5em;
+        }
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 550px) {
+    .tool-wrapper {
+        padding:15px;margin:0px;
+    }
+    .modal-content {
+        min-width : 250px;
+    }
+    .menu-wrapper {
+        height: 85px;
+        .menu-btn, .info-wrapper{
+            font-size: 2em;
+        }
+    }
+    .game-wrapper {
+        min-height: calc( 100vh - 85px );
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .instructions-wrapper {
+        // border : solid 1px red;
+        max-height: 190px !important;
+    }
+    .modal-content {
+        min-width : 350px;
+    }
+    .menu-wrapper {
+        height: 100px;
+        .menu-btn, .info-wrapper{
+            font-size: 3em;
+        }
+    }
+    .game-wrapper {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        min-height: calc( 100vh - 100px );
+        .container {
+            margin-top : 0;
+        }
+    }
+    .editor-wrapper-parent{
+        margin-top : 0px;
+        .tools-container-parent {
+            height: 30%;
+        }
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .modal-content {
+        min-width : 500px;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

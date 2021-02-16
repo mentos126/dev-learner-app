@@ -1,0 +1,221 @@
+<!-- MODAL TUTO LUNCHER -->
+<div *ngIf="isModalShown" [config]="{ show: true }" bsModal (onHide)="onModalHide('hide', $event)" #autoShownModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-auto-name">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 *ngIf="isPlaying===0 && !menuState" id="dialog-auto-name" class="modal-title pull-left">Nouvelle partie </h4>
+				<h4 *ngIf="isPlaying===2 && !menuState" id="dialog-auto-name" class="modal-title pull-left">Partie terminée</h4>
+				<h4 *ngIf="isPlaying===3 && !menuState" id="dialog-auto-name" class="modal-title pull-left">Partie terminée</h4>
+				<h4 *ngIf="menuState" id="dialog-auto-name" class="modal-title pull-left">Quitter la partie</h4>
+				<button type="button" class="close pull-right" aria-label="Close" (click)="autoShownModal.hide()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div *ngIf="!menuState">
+
+					<div *ngIf="isPlaying!==2 && isPlaying!==3" class="play-current-Game c-h-btn">
+						<button class="btn btn-success" (click)="autoShownModal.hide()" onclick="javascript:introJs().start()">Démarrer la partie&nbsp;&nbsp;<i class="fa fa-play"></i></button>
+					</div>
+					<div *ngIf="isPlaying===3" class="loose-current-Game">
+						<div class="row">
+							<div class="col-sm-12">
+								<p style="text-align:center; font-size: 2em">
+									Vous avez perdu
+								</p>
+							</div>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-6 c-h-btn"><button (click)="goMenu()" class="btn btn-default"><i class="fa fa-bars"></i>&nbsp;&nbsp;Menu</button></div>
+									<div class="col-xs-6 c-h-btn"><button (click)="autoShownModal.hide()" class="btn btn-success">Rejouer&nbsp;&nbsp;<i class="fa fa-repeat"></i></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div *ngIf="isPlaying===2" class="win-current-Game">
+						<div class="row">
+							<div class="col-sm-12">
+								<p style="text-align:center; font-size: 2em">
+									Vous avez gagné !
+
+								</p>
+								<div class="stars">
+									<i class="fa {{currentScore>0?'fa-star':'fa-star-o'}}"></i>
+									<i class="fa {{currentScore>=2?'fa-star':'fa-star-o'}}"></i>
+									<i class="fa {{currentScore>=3?'fa-star':'fa-star-o'}}"></i>
+									<i class="fa {{currentScore>=4?'fa-star':'fa-star-o'}}"></i>
+									<i class="fa {{currentScore==5?'fa-star':'fa-star-o'}}"></i>
+								</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="row">
+									<div class="col-xs-6 c-h-btn"><button (click)="goMenu()" class="btn btn-default"><i class="fa fa-bars"></i>&nbsp;&nbsp;Menu</button></div>
+									<div class="col-xs-6 c-h-btn"><button (click)="goLevelNext()" class="btn btn-success">Niveau suivant&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div *ngIf="menuState" class="backtomenu-wrapper row">
+
+					<div class="col-xs-12">
+						<p style="text-align:center">La partie en cours ne sera pas sauvegardée.</p>
+						<p style="text-align:center">Voulez vous continuer ?</p>
+						<div class="row">
+							<div class="col-xs-6 c-h-btn"><button class="btn btn-default" (click)="autoShownModal.hide()">Non</button></div>
+							<div class="col-xs-6 c-h-btn"><button (click)="goMenu()" class="btn btn-success">Oui</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="menu-wrapper">
+	<div class="row">
+		<div class="container">
+
+			<div class="col-xs-12">
+				<div class="row">
+
+					<div class="col-xs-2 col-sm-1 menu-btn" (click)="showMenu()">
+						<i class="fa fa-bars"></i>
+					</div>
+					<div class="col-xs-10 col-sm-11 info-wrapper">
+						Niveau {{ level.level }} - Monde {{ level.world }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="game-wrapper">
+
+	<div class="container">
+
+		<div class="row row-eq-height">
+			<!-- DIV EXITERNALISÉE -->
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="map-container-parent" #mapTuto>
+					<app-map [level]="level" #mapComponent></app-map>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 col-xs-12">
+
+				<div class="editor-wrapper-parent">
+					<div class="tools-container-parent">
+						<div class="row">
+
+							<div class="col-xs-6 no-padding-h" #conditionsTuto>
+
+								<div class="tool-wrapper">
+									<div class="elts-title o">
+										<div>
+											Conditions
+										</div>
+									</div>
+									<div class="elts-wrapper">
+										<div
+											cdkDropList
+											id="conditionsList"
+											[cdkDropListDisabled]="isPlaying === 1"
+											[cdkDropListData]="conditions"
+											[cdkDropListConnectedTo]="TARGET_CONDITIONS"
+											class="tile-row">
+											<div *ngFor="let box of conditions" class="tile" [style.background]="box" cdkDrag>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xs-6 no-padding-h" #instructionTuto>
+
+								<div class="tool-wrapper">
+									<div class="elts-title">
+										<div>
+											Instructions
+										</div>
+									</div>
+									<div class="elts-wrapper">
+										<div
+											cdkDropList
+											id="instructionsList"
+											[cdkDropListDisabled]="isPlaying === 1"
+											[cdkDropListData]="instructions"
+											[cdkDropListConnectedTo]="TARGET_INSTRUCTION"
+											class="tile-row">
+											<div *ngFor="let instruction of instructions" class="tile" cdkDrag>
+												<div class="elt"><i class="fa fa{{ instruction === '-left' ? '-reply': (instruction === '-right'?'-share':'-arrow-up') }}"></i></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<div class="editor-wrapper" #sialorsTuto>
+
+					<div class="run" #runTuto>
+						<div class="row">
+
+							<div *ngIf="isPlaying===0 || isPlaying===2 || isPlaying===3" (click)="play()" class="btn btn-default">
+								<i class="fa fa-play" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+								<div>Exécuter le programme</div>
+							</div>
+
+							<div *ngIf="isPlaying===1" (click)="stop()" class="btn btn-default">
+								<i class="fa fa-stop" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+								<div>Arrêter le programme</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="instructions-wrapper"
+						cdkDropList
+						id="instructionLine"
+						[cdkDropListData]="ifs"
+						[cdkDropListDisabled]="isPlaying === 1"
+						(cdkDropListDropped)="drop($event)">
+
+						<app-if
+							*ngFor="let if_ of ifs"
+							[assertion]="if_"
+							(dropped)="backup('restore')"
+							[cdkDropListDisabled_]="isPlaying === 1"
+							[sourceCondition]="TARGET_CONDITIONS"
+							[sourceInstruction]="TARGET_INSTRUCTION"
+							(deleteComponent)="deleteComponent(if_, $event)"
+							cdkDrag>
+
+							<div *cdkDragPlaceholder class="blank-instruction"></div>
+
+						</app-if>
+
+					</div>
+
+					<div class="blank-adder" (click)="isPlaying !==1 && addInstruction()" [ngClass]="{'loader-container':isPlaying===1}">
+						<div *ngIf="isPlaying === 1">
+							<div class="loader-cubic"></div>
+						</div>
+						<!-- <div *ngIf="isPlaying !== 1 && isPlaying===3"> -->
+            <div>
+							<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;<span>Nouveau block</span>
+						</div>
+					</div>
+				</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

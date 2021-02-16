@@ -1,0 +1,30 @@
+<!-- CARTE DU JEU -->
+
+<div class="map-wrapper">
+
+  <div *ngIf="map" class="map">
+
+    <div *ngFor="let boxes of map.boxes; let idx1 = index; trackBy: trackByFn" class="tile-row">
+      
+        <div *ngFor="let box of boxes;let idx2=index; trackBy: trackByFn" [style.background]="box.color" class="tile tile-center">
+         
+          <div class="player" *ngIf="box.player" [ngClass]="box.player?.classes">
+            <i class="fa fa-rocket" [ngClass]="box.player.direction"></i>
+          </div>
+
+          <div class="star" *ngIf="!box.player && box?.star">
+            <i class="fa fa-star"></i>
+          </div>
+
+          <div class="win-tile" *ngIf="box?.win">
+            <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+          </div>
+          
+        </div>
+
+    </div>
+
+  </div>
+
+
+</div>

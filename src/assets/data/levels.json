@@ -1,0 +1,35 @@
+{
+    "worldOne" : [
+      { "score": 0, "world": 1, "level": 1, "current": false},
+      { "score": 0, "world": 1, "level": 2, "current": false},
+      { "score": 0, "world": 1, "level": 3, "current": false},
+      { "score": 0, "world": 1, "level": 4, "current": false},
+      { "score": 0, "world": 1, "level": 5, "current": false},
+      { "score": 0, "world": 1, "level": 6, "current": false},
+      { "score": 0, "world": 1, "level": 7, "current": false},
+      { "score": 0, "world": 1, "level": 8, "current": false},
+      { "score": 0, "world": 1, "level": 9, "current": false}
+    ] ,
+    "worldTwo": [
+      {"score": 0, "world": 2, "level": 1, "current": false},
+      {"score": 0, "world": 2, "level": 2, "current": false},
+      {"score": 0, "world": 2, "level": 3, "current": false},
+      {"score": 0, "world": 2, "level": 4, "current": false},
+      {"score": 0, "world": 2, "level": 5, "current": false},
+      {"score": 0, "world": 2, "level": 6, "current": false},
+      {"score": 0, "world": 2, "level": 7, "current": false},
+      {"score": 0, "world": 2, "level": 8, "current": false},
+      {"score": 0, "world": 2, "level": 9, "current": false}
+    ] ,
+    "worldThree": [
+      {"score": 0, "world": 3, "level": 1, "current": false},
+      {"score": 0, "world": 3, "level": 2, "current": false},
+      {"score": 0, "world": 3, "level": 3, "current": false},
+      {"score": 0, "world": 3, "level": 4, "current": false},
+      {"score": 0, "world": 3, "level": 5, "current": false},
+      {"score": 0, "world": 3, "level": 6, "current": false},
+      {"score": 0, "world": 3, "level": 7, "current": false},
+      {"score": 0, "world": 3, "level": 8, "current": false},
+      {"score": 0, "world": 3, "level": 9, "current": false}
+    ]
+  }

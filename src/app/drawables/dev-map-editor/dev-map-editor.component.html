@@ -1,0 +1,129 @@
+<!-- CARTE DU JEU -->
+
+<div class="center">
+  
+  <div class="container">
+    
+    <div class="row">
+      
+      <div class="col-xs-6">
+        <div class="map-wrapper">
+          
+          <div *ngIf="map" class="map">
+            
+            <div *ngFor="let boxes of map.boxes; let idx1 = index" class="tile-row">
+              
+              <div *ngFor="let box of boxes;let idx2=index" [style.background]="box.color" class="tile tile-center"
+              (dragover)="handler(idx1, idx2)"
+              (click)="handler(idx1, idx2)">
+              
+              <div class="player" *ngIf="box.player" [ngClass]="box.player?.classes" #playerTuto>
+                <i class="fa fa-rocket" [ngClass]="box.player.direction"></i>
+              </div>
+              
+              <div class="win-tile" *ngIf="box?.win">
+                <i class="fa fa-flag-checkered" aria-hidden="true"></i>
+              </div>
+              
+              <div class="star" *ngIf="box?.star">
+                <i class="fa fa-star"></i>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="col-xs-6">
+      
+      
+      <div class="couleurs-wrapper">
+        
+        <div class="row">
+          <div class="currentColor col-xs-12">
+            <!-- CURRENT OBJ -->
+            <div *ngIf="currentColor!==''" [style.background]="currentColor">
+              
+            </div>
+            
+            <div *ngIf="currentStart!==''" class="player">
+              
+              <i color="grey" *ngIf="currentStart ==='-up' " class="fa fa-rocket up"></i>
+              <i color="grey" *ngIf="currentStart ==='-down' " class="fa fa-rocket down"></i>
+              <i color="grey" *ngIf="currentStart ==='-left' " class="fa fa-rocket left"></i>
+              <i color="grey" *ngIf="currentStart ==='-right' " class="fa fa-rocket right"></i>
+              
+            </div>
+            
+            <div *ngIf="currentEnd!==''">
+              <i class="fa fa-flag-checkered" color="grey" aria-hidden="true"></i>
+            </div>
+            
+            <div *ngIf="currentStar!==''">
+              <i class="fa fa-star"></i>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="row">
+          
+          <div class="choix">
+            <div class="row">
+              
+              
+              
+              <div *ngFor="let color of colors" class="une-couleur" [style.background]="color" (click)="setCurrentColor(color)">
+              </div>
+              
+              
+              
+              <div class="start player">
+                <div (click)="setStart('-up')">
+                  <i color="grey" class="fa fa-rocket up"></i>
+                </div>
+                <div (click)="setStart('-left')">
+                  <i color="grey" class="fa fa-rocket left"></i>
+                </div>
+                <div (click)="setStart('-down')">
+                  <i color="grey" class="fa fa-rocket down"></i>
+                </div>
+                <div (click)="setStart('-right')">
+                  <i color="grey" class="fa fa-rocket right"></i>
+                </div>
+              </div>
+              
+              
+              <div class="start">
+                <div (click)="setFinal('lol')">
+                  <i color="grey" class="fa fa-flag-checkered"></i>
+                </div>
+              </div>
+              <div class="star" (click)="setStar('trololo')">
+                <i class="fa fa-star"></i>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="row">
+    <div class="dataOut">
+      <button class="btn btn-default" (click)="generate()">Générer la carte</button>&nbsp;&nbsp;
+      <button class="btn btn-default" (click)="clear()">Néttoyer la carte</button>
+      <pre>
+        {{ map | json }}
+      </pre>
+    </div>
+  </div>
+</div>  
+</div>
+

@@ -1,0 +1,140 @@
+$map-max-width : 700px;
+
+.map-wrapper {
+
+    .map {
+        display: flex;
+        flex-direction: column;
+
+        min-width: 300;
+        max-width : $map-max-width;
+
+        .tile-row {
+            margin : 0;padding  : 0;
+            width: auto;
+            list-style: none;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-flow: row;
+            justify-content: space-around;
+
+            
+            .tile {
+
+                margin: 1px 0 0 1px;
+                border:solid 1px rgb(207, 207, 207);
+                border-radius: 4px;
+                font-weight: bold;
+                font-size: 1em;
+                text-align: center;
+                flex: 1 0;
+                // flex: 1 0 auto;
+                height:auto;
+                
+                .player.play {
+                    i{ color: white; }
+                }
+                .player.win {
+                    i{
+                        animation: colorchange 4s; /* animation-name followed by duration in seconds*/
+                        -webkit-animation: colorchange 4s; /* Chrome and Safari */
+                        animation-iteration-count: infinite;
+                    }
+                }
+                .star {
+                    i{
+                        font-size: 1.7em;
+                        color : rgba(0, 0, 0, 0.479);
+                    }
+                }
+                .player {
+                    i {
+                        font-size: 4rem ;
+                    }
+                    .up {
+                        transform:rotate(-45deg); 
+                        -ms-transform: rotate(-45deg); /* IE 9 */
+                        -webkit-transform: rotate(-45deg); /* Safari */
+                    }
+                    .down {
+                        transform:rotate(135deg); 
+                        -ms-transform: rotate(135deg); /* IE 9 */
+                        -webkit-transform: rotate(135deg); /* Safari */
+                    }
+                    .left {
+                        transform: rotate(-135deg); 
+                        -ms-transform: rotate(-135deg); /* IE 9 */
+                        -webkit-transform: rotate(-135deg); /* Safari */
+                    }
+                    .right {
+                        transform:rotate(45deg); 
+                        -ms-transform: rotate(45deg); /* IE 9 */
+                        -webkit-transform: rotate(45deg); /* Safari */
+                    }
+
+                }
+                .win-tile{
+                    color : white;
+                    i { 
+                        font-size: 4rem ;
+                    }
+                }
+               
+            }
+            .tile:before {
+                content:'';
+                float:left;
+                padding-top:100%;
+            }
+            .tile.tile-center {
+                // background: tomato;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+            }   
+        }
+    }
+}
+
+
+@keyframes colorchange {
+    0%   {color: orange ;}
+    50%  {color: yellowgreen ;}
+    100%  {color: rgb(43, 168, 226) ;}
+    75%  {color: rgb(47, 116, 143) ;}
+    100% {color: rgb(255, 102, 0) ;}
+}
+@-webkit-keyframes colorchange {
+    0%   {color: orange ;}
+    50%  {color: yellowgreen ;}
+    100%  {color: rgb(43, 168, 226) ;}
+    75%  {color: rgb(47, 116, 143) ;}
+    100% {color: rgb(255, 102, 0) ;}
+}
+
+@-webkit-keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+}
+
+.var-blue {
+    background-color : blue;
+}
+
+.var-green {
+    background-color : green;
+}
+
+.var-orange {
+    background-color : orange;
+}

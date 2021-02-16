@@ -1,0 +1,148 @@
+
+<div *ngIf="step < 3" class="full-centering menu-step-1-2" [ngClass]="{'fadein':step<3}">
+  <div class="container full-centering">
+    <div class="row">
+      <div class="col">
+        <div class="svg-container">
+          
+          <svg viewBox="0 0 960 300">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="80%">Dev Learner</text>
+            </symbol>
+            
+            <g class = "g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+        </div>
+        
+        <div class="row">
+          
+          <div class="col">
+            
+            <div class="step-1" *ngIf="step===1" [ngClass]="{'fadein':step===1}">
+              <button class="btn-lg btn btn-default" (click)="goStep(2)">Jouer</button>
+            </div>
+            
+            <div class="step-2" *ngIf="step===2" [ngClass]="{'fadein':step===2}">
+              <input [(ngModel)]="pseudo" (keyup.enter)="goStep(3)" [ngClass]="{'error':error}" type="text" placeholder="Votre pseudo" class="input-x">
+              <button (click)="goStep(3)" class="btn-lg btn btn-default">C'est parti !</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="step === 3" class="menu-step-3 full-centering" [ngClass]="{'fadein':step===3}">
+  
+  <div class="container">
+    <div class="row minHeight">
+      <div class="col-xs-12 col-sm-2 col-md-4 col-lg-3">
+        <div class="light-menu">
+          <div (click)="setLightMenu(1)" class="elt-m" [ngClass]="lightMenu===1?'active-m':''">
+            <div class="txt-m">
+              Niveaux
+              <hr class="p40">
+            </div>
+          </div>
+          <div (click)="setLightMenu(2)" class="elt-m" [ngClass]="lightMenu===2?'active-m':''">
+            <div class="txt-m">
+              Statistiques
+              <hr class="p40">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-8 col-md-6 col-lg-7">
+
+        <div *ngIf="lightMenu===1 && levels!=null" class="levelsV">
+          <div class="nav-tabs-x row">
+            <div (click)="changeTab(1)" class="tab col-xs-4" [ngClass]="{'active-t':activeTab===1}">
+              <div class="txt-item ti-w1">If zen world</div>
+            </div>
+            <div (click)="changeTab(2)" class="tab col-xs-4" [ngClass]="{'active-t':activeTab===2}">
+              <div class="txt-item ti-w2">Loop world</div>
+            </div>
+            <div (click)="changeTab(3)" class="tab col-xs-4" [ngClass]="{'active-t':activeTab===3}">
+              <div class="txt-item ti-w3">Function world</div>
+            </div>
+          </div>
+
+          <div *ngIf="activeTab===1" id="tab1">
+            <div class="row">
+              <div *ngFor="let level of levels.worldOne" (click)="goLevel(1,level.level)" class="card-level success col-xs-4">
+                <div class="ctt w1">
+
+                  <div class="level-name">{{ level.level }}</div>
+                  <div class="level-score">
+                    
+                    <i class="fa {{level.score>0?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=2?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=3?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=4?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score==5?'fa-star':'fa-star-o'}}"></i>
+                  
+                  </div>
+                  <div class="hs"><i class="fa fa-play"></i></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div *ngIf="activeTab===2">
+            <div class="row">
+              <div *ngFor="let level of levels.worldTwo" (click)="goLevel(2,level.level)" class="card-level success col-xs-4">
+                <div class="ctt w2">
+
+                  <div class="level-name">{{ level.level }}</div>
+                  <div class="level-score">
+                    
+                    <i class="fa {{level.score>0?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=2?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=3?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=4?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score==5?'fa-star':'fa-star-o'}}"></i>
+                  
+                  </div>
+                  <div class="hs"><i class="fa fa-play"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="activeTab===3">
+            <div class="row">
+              <div *ngFor="let level of levels.worldThree" (click)="goLevel(3,level.level)" class="card-level success col-xs-4">
+                <div class="ctt w3">
+
+                  <div class="level-name">{{ level.level }}</div>
+                  <div class="level-score">
+                    
+                    <i class="fa {{level.score>0?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=2?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=3?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score>=4?'fa-star':'fa-star-o'}}"></i>
+                    <i class="fa {{level.score==5?'fa-star':'fa-star-o'}}"></i>
+                  
+                  </div>
+                  <div class="hs"><i class="fa fa-play"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="lightMenu===2" class="settingsV">
+          Bientôt disponible
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-beauty1></app-beauty1>
+</div>
