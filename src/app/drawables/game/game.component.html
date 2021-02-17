@@ -200,7 +200,7 @@
 
 					</div>
 
-					<div class="blank-adder" (click)="isPlaying !==1 && addInstruction()" [ngClass]="{'loader-container':isPlaying===1}">
+					<div class="blank-adder" (click)="isPlaying !==1 && addInstruction()" [ngClass]="{'loader-container':isPlaying === 1}">
 						<div *ngIf="isPlaying === 1">
 							<div class="loader-cubic"></div>
 						</div>

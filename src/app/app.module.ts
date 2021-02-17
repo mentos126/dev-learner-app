@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { SharedBootstrapModule } from './middlewares/bootstrap-moddule';
 import { PositionService } from './game/player/position.service';
 import { MenuComponent } from './drawables/menu/menu.component';
-import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from  'ngx-cookie-service'//  'ngx-cookie-service';
 import { ClientSessionService } from './session/client-session.service';
 import { Beauty1Component } from './drawables/styles/beauty1/beauty1.component';
 import { GameComponent } from './drawables/game/game.component';
@@ -33,7 +33,7 @@ import { ProviderService } from './drawables/menu/provider.service';
     IfComponent,
     DevMapEditorComponent
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ], // Autorise les éléments importés 
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ], // Autorise les éléments importés
   imports: [
     BrowserModule,
     SharedBootstrapModule,
@@ -44,7 +44,11 @@ import { ProviderService } from './drawables/menu/provider.service';
     HttpClientModule
   ],
   providers: [
-    MapProviderService,PositionService, CookieService, ClientSessionService, ProviderService
+    MapProviderService,
+    PositionService,
+    CookieService,
+    ClientSessionService,
+    ProviderService
   ],
   bootstrap: [AppComponent]
 })
