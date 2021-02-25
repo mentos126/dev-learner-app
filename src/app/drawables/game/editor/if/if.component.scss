@@ -38,8 +38,9 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .row > [class*='col-'] {
@@ -92,9 +93,9 @@
         border-top-right-radius: 27px;
         border-bottom-right-radius: 27px;
     }
-    
+
     .elt-wrapper{
-        
+
 
         height: 100%;
         display: flex;
@@ -103,7 +104,7 @@
         align-items: center;
         align-self: center;
         flex-wrap: wrap;
-        
+
         padding : 10px;
         flex-direction: column;
         // align-items: center;
@@ -139,8 +140,12 @@
                 color : grey;
             }
             .e-i, .e-c {
-                
+
             }
         }
     }
+}
+
+.col-xs-12 {
+  width: 100%;
 }
