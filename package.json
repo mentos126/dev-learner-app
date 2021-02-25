@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "prod": "ng build --prod --base-href \"https://mentos126.github.io/dev-learner-app/\" &&  npx angular-cli-ghpages --dir=dist/dev-learner-app",
+    "prod": "ng build --prod --output-path dist --base-href https://mentos126.github.io/dev-learner-app/ &&  npx angular-cli-ghpages --dir=dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
